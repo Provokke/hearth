@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hearth"
+version = "0.1.0"
+description = "A small static site generator"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+[project.scripts]
+hearth = "hearth.cli:main"
+
+[tool.setuptools]
+packages = ["hearth"]
