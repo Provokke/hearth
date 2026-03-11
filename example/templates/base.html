@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ page.title }} - {{ site.title }}{% endblock %}</title>
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+{% include "nav.html" %}
+<main>
+{% block main %}{{ content | safe }}{% endblock %}
+</main>
+<footer>{{ site.title }}, built {{ site.built | date:"%d %B %Y" }}</footer>
+</body>
+</html>
