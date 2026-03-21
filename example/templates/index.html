@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ site.title }}{% endblock %}
+{% block main %}
+{{ content | safe }}
+<h2>Latest posts</h2>
+<ul class="posts">
+{% for item in site.pages %}{% if item.layout == "post.html" %}
+<li><a href="{{ item.url }}">{{ item.title }}</a> <small>{{ item.date | date:"%d %b %Y" }}</small><br>{{ item.summary }}</li>
+{% endif %}{% endfor %}
+</ul>
+{% endblock %}
